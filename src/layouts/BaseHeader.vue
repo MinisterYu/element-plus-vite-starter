@@ -1,4 +1,4 @@
-<script lang="ts" setup>
+<script lang="ts" setup name="BaseHeader">
 import { repository } from '~/../package.json'
 
 import { toggleDark } from '~/composables'

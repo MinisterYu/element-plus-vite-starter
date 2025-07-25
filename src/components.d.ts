@@ -7,8 +7,16 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    BaseHeader: typeof import('./components/layouts/BaseHeader.vue')['default']
-    BaseSide: typeof import('./components/layouts/BaseSide.vue')['default']
+    12: typeof import('./pages/nav/1/2.vue')['default']
+    2: typeof import('./pages/nav/2.vue')['default']
+    4: typeof import('./pages/nav/dynamic-[id].vue')['default']
+    AppLayout: typeof import('./layouts/AppLayout.vue')['default']
+    BaseHeader: typeof import('./layouts/BaseHeader.vue')['default']
+    BaseSide: typeof import('./layouts/BaseSide.vue')['default']
+    copy: typeof import('./pages/nav/1/item-1 copy.vue')['default']
+    Data: typeof import('./pages/nav/data/index.vue')['default']
+    Dynamic: typeof import('./pages/nav/dynamic-[id].vue')['default']
+    'Dynamic-[id]': typeof import('./pages/nav/dynamic-[id].vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
     ElDatePicker: typeof import('element-plus/es')['ElDatePicker']
@@ -21,9 +29,14 @@ declare module 'vue' {
     ElSwitch: typeof import('element-plus/es')['ElSwitch']
     ElTag: typeof import('element-plus/es')['ElTag']
     HelloWorld: typeof import('./components/HelloWorld.vue')['default']
+    Item1: typeof import('./pages/nav/1/item-1.vue')['default']
     Logos: typeof import('./components/Logos.vue')['default']
     MessageBoxDemo: typeof import('./components/MessageBoxDemo.vue')['default']
+    Pages: typeof import('./pages/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Stress: typeof import('./pages/nav/tools/stress.vue')['default']
+    Tools: typeof import('./pages/nav/tools/index.vue')['default']
+    Users: typeof import('./pages/nav/users/index.vue')['default']
   }
 }

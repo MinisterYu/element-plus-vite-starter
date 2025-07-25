@@ -36,10 +36,12 @@
     "sass": "^1.82.0",
     "typescript": "^5.6.3",
     "unocss": "^0.65.1",
+    "unplugin-auto-import": "^19.3.0",
     "unplugin-vue-components": "^0.27.5",
     "unplugin-vue-router": "^0.10.9",
     "vite": "^6.0.3",
-    "vite-ssg": "^0.24.2",
+    "vite-plugin-pages": "^0.33.1",
+    "vite-plugin-vue-layouts": "^0.11.0",
     "vue-tsc": "^2.1.10"
   }
 }

@@ -1,8 +1,14 @@
 /// <reference types="vite/client" />
 
-declare module '*.vue' {
-  import type { DefineComponent } from 'vue'
+// 声明vite-plugin-pages虚拟模块
+declare module '~pages' {
+  import type { RouteRecordRaw } from 'vue-router'
+  const routes: RouteRecordRaw[]
+  export default routes
+}
 
-  const component: DefineComponent<object, object, any>
-  export default component
+// 声明vite-plugin-vue-layouts虚拟模块
+declare module 'virtual:generated-layouts' {
+  import type { RouteRecordRaw } from 'vue-router'
+  export function setupLayouts(routes: RouteRecordRaw[]): RouteRecordRaw[]
 }

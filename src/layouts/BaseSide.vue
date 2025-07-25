@@ -1,4 +1,4 @@
-<script lang="ts" setup>
+<script lang="ts" setup name="BaseSide">
 import {
   Document,
   Menu as IconMenu,
@@ -17,6 +17,10 @@ function handleClose(key: string, keyPath: string[]) {
 }
 </script>
 
+<style scoped>
+
+</style>
+
 <template>
   <el-menu
     router
@@ -25,38 +29,47 @@ function handleClose(key: string, keyPath: string[]) {
     @open="handleOpen"
     @close="handleClose"
   >
-    <el-sub-menu index="1">
+    <el-sub-menu index="#">
       <template #title>
         <el-icon>
           <Location />
         </el-icon>
-        <span>Navigator One</span>
+        <span>工具列表</span>
       </template>
+      
       <el-menu-item-group>
         <template #title>
-          <span>Group One</span>
+          <span>常用工具</span>
         </template>
-        <el-menu-item index="/nav/1/item-1">
-          item one
+        <el-menu-item index="/nav/tools">
+          console
         </el-menu-item>
-        <el-menu-item index="1-2">
-          item two
+
+        <el-menu-item index="/nav/tools/stress">
+          stress test
+        </el-menu-item>
+        
+      </el-menu-item-group>
+
+
+      <el-menu-item-group title="Data list">
+        <el-menu-item index="data">
+          data map
         </el-menu-item>
       </el-menu-item-group>
-      <el-menu-item-group title="Group Two">
-        <el-menu-item index="1-3">
-          item three
-        </el-menu-item>
-      </el-menu-item-group>
-      <el-sub-menu index="1-4">
+
+
+      <el-sub-menu index="users">
         <template #title>
-          <span>item four</span>
+          <span>users</span>
         </template>
-        <el-menu-item index="1-4-1">
-          item one
+        <el-menu-item index="users/setting">
+          setting
         </el-menu-item>
       </el-sub-menu>
     </el-sub-menu>
+
+
     <el-menu-item index="/nav/2">
       <el-icon>
         <IconMenu />
@@ -65,6 +78,7 @@ function handleClose(key: string, keyPath: string[]) {
         Navigator Two
       </template>
     </el-menu-item>
+
     <el-menu-item index="3" disabled>
       <el-icon>
         <Document />
@@ -73,6 +87,7 @@ function handleClose(key: string, keyPath: string[]) {
         Navigator Three
       </template>
     </el-menu-item>
+
     <el-menu-item index="/nav/4">
       <el-icon>
         <Setting />
